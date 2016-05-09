@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset='utf-8'>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="shengcheng.js"></script>
+<script type="text/javascript" src="dongdian.js"></script>
+
+<style type="text/css">
+	#pointbox{
+		width: 800px;
+		height: 600px;
+		border: 1px solid black;
+		margin:0px;
+		padding: 0px}
+	div{float: left;}
+	.after{position: absolute;}
+	.box_blue{ border:1px solid blue; width:50px; height:50px; margin:0 ;
+		border-radius:50px;
+		background-color: blue}
+	.box_red{ border:1px solid red; width:50px; height:50px; margin:0 ;
+		border-radius:50px;
+		background-color: red}
+	.box_green{ border:1px solid green; width:50px; height:50px; margin:0 ;
+		border-radius:50px;
+		background-color: green}
+</style>
+
+</head>
+<body>
+
+<div id="pointbox">
+	<div id="red0" class="box_red" style="position: absolute;"></div>
+	<div id="red1" class="box_red" style="position: absolute;"></div>
+	<div id="red2" class="box_red" style="position: absolute;"></div>
+	<div id="green0" class="box_green" style="position: absolute;"></div>
+	<div id="green1" class="box_green" style="position: absolute;"></div>
+	<div id="green2" class="box_green" style="position: absolute;"></div>
+	<div id="blue_0" class="box_blue" style="position: absolute;"></div>
+	<div id="blue_1" class="box_blue" style="position: absolute;"></div>
+	
+</div>
+<div id="formbox">
+			<table>
+			<tr>
+				<td><p>red_x0:</p><input type="text" id="postext_rx0"></td>
+				<td><p>red_y0:</p><input type="text" id="postext_ry0"></td>
+			</tr>
+			<tr>
+				<td><p>red_x1:</p><input type="text" id="postext_rx1"></td>
+				<td><p>red_y1:</p><input type="text" id="postext_ry1"></td>
+			</tr>
+			<tr>
+				<td><p>red_x2:</p><input type="text" id="postext_rx2"></td>
+				<td><p>red_y2:</p><input type="text" id="postext_ry2"></td>
+			</tr>
+			<tr>
+				<td><p>green_x0:</p><input type="text" id="postext_gx0"></td>
+				<td><p>green_y0:</p><input type="text" id="postext_gy0"></td>
+			</tr>
+			<tr>
+				<td><p>green_x1:</p><input type="text" id="postext_gx1"></td>
+				<td><p>green_y1:</p><input type="text" id="postext_gy1"></td>
+			</tr>
+			<tr>
+				<td><p>green_x2:</p><input type="text" id="postext_gx2"></td>
+				<td><p>green_y2:</p><input type="text" id="postext_gy2"></td>
+			</tr>
+			<tr>
+				<td><p>blue_x0:</p><input type="text" id="postext_bx0"></td>
+				<td><p>blue_y0:</p><input type="text" id="postext_by0"></td>
+			</tr>
+			<tr>
+				<td><p>blue_x1:</p><input type="text" id="postext_bx1"></td>
+				<td><p>blue_y1:</p><input type="text" id="postext_by1"></td>
+			</tr>
+			
+			</table>
+		    <tr>
+			    
+				<td><input type="button" value="生成" id="show"></td>
+				
+			</tr>
+	</div>
+	<button id="button1">开始动画</button>
+
+
+
+
+
+</body>
+</html>
