@@ -5,7 +5,7 @@
             即一对三式选择
 
             放弃处理的方式：用对应的biaojired和biaojigreen两个数组来记录是否被选中
-            若被选中，则将对应的距离放大化，最短距离的筛选时，该点对应距离就会被淘汰
+            若被选中，标记为0，将对应的距离放大化，最短距离的筛选时，该点对应距离就会被淘汰
     */
 $(document).ready(function () {
   $('#button1').click(function () {
@@ -124,7 +124,7 @@ $(document).ready(function () {
       left: lujin_x[i],
       top: lujin_y[i],
       opacity: '1'
-    }, 'slow',function(){
+    }, 1000,function(){
         if(i==3) alert(1);
     });
     }
@@ -133,7 +133,7 @@ $(document).ready(function () {
       left: lujin_x[i],
       top: lujin_y[i],
       opacity: '1'
-    }, 'slow',function(){
+    }, 1000,function(){
         if(i==5) alert(1);
     });
     }
@@ -141,11 +141,11 @@ $(document).ready(function () {
       left: bx[0],
       top: by[0],
       opacity: '1'
-    }, 'slow');
+    }, 1000);
     div1.animate({//id为div1的蓝点回到原位
       left: bx[1],
       top: by[1],
       opacity: '1'
-    }, 'slow');
+    }, 1000);
   });
 });
