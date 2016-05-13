@@ -1,22 +1,40 @@
 
     $(document).ready(function () {//显示出七个点
-        $('#show').click(function (){
-            var red_x0 = $('#postext_rx0').val() - $('#red0').position().left;
-            var red_y0 = $('#postext_ry0').val() - $('#red0').position().top;
-            var red_x1 = $('#postext_rx1').val() - $('#red1').position().left;
-            var red_y1 = $('#postext_ry1').val() - $('#red1').position().top;
-            var red_x2 = $('#postext_rx2').val() - $('#red2').position().left;
-            var red_y2 = $('#postext_ry2').val() - $('#red2').position().top;
-            var green_x0 = $('#postext_gx0').val() - $('#green0').position().left;
-            var green_y0 = $('#postext_gy0').val() - $('#green0').position().top;
-            var green_x1 = $('#postext_gx1').val() - $('#green1').position().left;
-            var green_y1 = $('#postext_gy1').val() - $('#green1').position().top;
-            var green_x2 = $('#postext_gx2').val() - $('#green2').position().left;
-            var green_y2 = $('#postext_gy2').val() - $('#green2').position().top;
-            var blue_x0 = $('#postext_bx0').val() - $('#blue_0').position().left;
-            var blue_y0 = $('#postext_by0').val() - $('#blue_0').position().top;
-            var blue_x1 = $('#postext_bx1').val() - $('#blue_1').position().left;
-            var blue_y1 = $('#postext_by1').val() - $('#blue_1').position().top;
+        $('#button2').click(function (){
+            var red_x0 = Math.random()*800;// - $('#red0').position().left;
+            var red_y0 = Math.random()*600; //- $('#red0').position().top;
+            var red_x1 = Math.random()*800;//- $('#red1').position().left;
+            var red_y1 = Math.random()*600; //- $('#red1').position().top;
+            var red_x2 = Math.random()*800; //- $('#red2').position().left;
+            var red_y2 = Math.random()*600; //- $('#red2').position().top;
+            var green_x0 = Math.random()*800;// - $('#green0').position().left;
+            var green_y0 = Math.random()*600; //- $('#green0').position().top;
+            var green_x1 = Math.random()*800; //- $('#green1').position().left;
+            var green_y1 = Math.random()*600; //- $('#green1').position().top;
+            var green_x2 = Math.random()*800; //- $('#green2').position().left;
+            var green_y2 = Math.random()*600; //- $('#green2').position().top;
+            var blue_x0 = Math.random()*800; //- $('#blue_0').position().left;
+            var blue_y0 = Math.random()*600; //- $('#blue_0').position().top;
+            var blue_x1 = Math.random()*800; //- $('#blue_1').position().left;
+            var blue_y1 = Math.random()*600; //- $('#blue_1').position().top;
+
+            document.getElementById('postext_rx0').value=red_x0 + 9;
+            document.getElementById('postext_rx1').value=red_x1 + 9;
+            document.getElementById('postext_rx2').value=red_x2 + 9;
+            document.getElementById('postext_ry0').value=red_y0 + 9;
+            document.getElementById('postext_ry1').value=red_y1 + 9;
+            document.getElementById('postext_ry2').value=red_y2 + 9;
+            document.getElementById('postext_gx0').value=green_x0 + 9;
+            document.getElementById('postext_gx1').value=green_x1 + 9;
+            document.getElementById('postext_gx2').value=green_x2 + 9;
+            document.getElementById('postext_gy0').value=green_y0 + 9;
+            document.getElementById('postext_gy1').value=green_y1 + 9;
+            document.getElementById('postext_gy2').value=green_y2 + 9;
+            document.getElementById('postext_bx0').value=blue_x0 + 9;
+            document.getElementById('postext_bx1').value=blue_x1 + 9;
+            document.getElementById('postext_by0').value=blue_y0 + 9;
+            document.getElementById('postext_by1').value=blue_y1 + 9;
+
             
             //$('img').toggleClass('after');
             $('#red0').css("position", "absolute");

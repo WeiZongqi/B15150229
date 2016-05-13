@@ -27,6 +27,8 @@ $(document).ready(function () {
     //biaoji用来标记红绿各个点是否被选中过，选中过就被赋值为0
     var jihaox,jihaoy;
     //jihao用来更新一对三式选择中的  “一”
+    var distance_v=new Array(6);
+    //距离与速度成正(animate的每次动画时间由此得出)
     for (var i = 0; i < 8; i++) { //初始化
       lujin_x[i] = 0;
       lujin_y[i] = 0;
@@ -34,6 +36,9 @@ $(document).ready(function () {
     for (var i = 0; i < 3; i++) {
       biaojired[i] = 2;
       biaojigreen[i] = 2;
+    }
+    for (var i = 0; i < 6; i++) {
+      distance_v[i]=0;
     }
     rx[0] = $('#postext_rx0').val() - 9; //获值
     rx[1] = $('#postext_rx1').val() - 9;
@@ -72,6 +77,13 @@ $(document).ready(function () {
         jihaoy = gy[zhan];
       }
     }
+
+    distance_v[0]=distance1(bx[0],by[0],lujin_x[0],lujin_y[0])*10;
+    for(var i=1;i<6;i++){
+      distance_v[i]=distance1(lujin_x[i-1],lujin_y[i-1],lujin_x[i],lujin_y[i])*10;
+    }
+    distance_v[4]=distance1(bx[1],by[1],lujin_x[4],lujin_y[4])*10;
+    //通过对路径的长短来定义每次animate运动的时间
     //功能区/////////////////////////////////////////////////////////////////////////////////////////////
     
     function distance(a, b, c, d, e) { 
@@ -124,7 +136,7 @@ $(document).ready(function () {
       left: lujin_x[i],
       top: lujin_y[i],
       opacity: '1'
-    }, 1000,function(){
+    }, distance_v[i],"linear",function(){
         if(i==3) alert(1);
     });
     }
@@ -133,7 +145,7 @@ $(document).ready(function () {
       left: lujin_x[i],
       top: lujin_y[i],
       opacity: '1'
-    }, 1000,function(){
+    }, distance_v[i],"linear",function(){
         if(i==5) alert(1);
     });
     }
@@ -141,11 +153,11 @@ $(document).ready(function () {
       left: bx[0],
       top: by[0],
       opacity: '1'
-    }, 1000);
+    },distance1(lujin_x[3],lujin_y[3],bx[0],by[0])*10,"linear");
     div1.animate({//id为div1的蓝点回到原位
       left: bx[1],
       top: by[1],
       opacity: '1'
-    }, 1000);
+    }, distance1(lujin_x[5],lujin_y[5],bx[1],by[1])*10,"linear" );
   });
 });
